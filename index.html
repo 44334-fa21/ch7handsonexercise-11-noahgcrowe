@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Door County Wildflowers</title>
+<title>Crowe Door County Wildflowers</title>
 <meta charset="utf-8">
 <style>
 header, nav, main, footer, aside { display: block; }
@@ -11,7 +11,9 @@ body { margin:0;
 #container { background-color: #EEEEEE;
              color: #006600;
              min-width: 960px;
-             font-family: Verdana, Arial, sans-serif; }
+             font-family: Verdana, Arial, sans-serif;
+             grid-template-columns: 160px 1fr 210px;
+            grid-template-rows: 120px auto;}
 header { background-color: #636631;
          background-image: url(showybg.jpg);
          background-position: bottom;
@@ -20,13 +22,14 @@ header { background-color: #636631;
          color: #cc66cc;
          text-align: right;
          padding: 0 20px;
-         border-bottom: 2px solid #000000; }		 
-nav { float: left;
-      width: 150px; }
-aside { float: right;
-        width: 200px; }
-main { margin: 0 210px 0 160px;
-        padding: 1px 10px 20px 10px;
+         border-bottom: 2px solid #000000;
+         grid-row: 1 / 2;
+         grid-column: 1 / 4; }
+nav { grid-row: 2/3;
+      grid-column:1/2; }
+aside { grid-row: 2/3;
+        grid-column: 3/4; }
+main {  padding: 1px 10px 20px 10px;
         background-color: #FFFFFF;
         color: #006600; }
 footer { font-size: .70em;
@@ -34,11 +37,12 @@ footer { font-size: .70em;
          color: #006600;
          background-color: #FFFFFF;
          padding-top: 10px;
-         clear: both; }		 
+         grid-row: 2/3;
+         grid-column: 3/4; }
 h1 { margin-top: 0;
      font-size: 3em;
      text-align: left;
-     text-shadow: 2px 2px 2px #000000; }	 
+     text-shadow: 2px 2px 2px #000000; }
 header a {font-size: 0.80em; }
 header a:link, header a:visited { color: #FFFFFF; }
 header a:focus, header a:hover { color: #EEEEEE; }
@@ -62,8 +66,8 @@ aside h3 { padding-bottom: 2px;
            font-size: 0.90em;
 		   color: #CC66CC; }
 .news { font-size: 0.80em;
-        margin: 10px; }		
-</style> 
+        margin: 10px; }
+</style>
 </head>
 <body>
 <div id="container">
@@ -99,6 +103,6 @@ Newport Wilderness Society</a> sponsors free meadow hikes at 9am every Saturday.
     <footer> Copyright &copy; 2018 Door County Wild Flowers<br>
     </footer>
   </main>
-</div> 
+</div>
 </body>
 </html>
